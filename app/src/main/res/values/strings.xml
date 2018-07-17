@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Loginmain</string>
+    <string name="ok">OK</string>
+    <string name="signup_login">OR USE</string>
+    <string name="data_keeper">Data Keeper</string>
+    <string name="frontlook">FrontLook</string>
+    <string name="enter_10_digit_mobile_number">Enter 10 Digit Mobile Number</string>
+    <string name="signup_login_using_google_facebook">null</string>
+
+    <!--Facebook strings-->
+    <string name="facebook_app_id">[APP_ID]</string>
+    <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
+    <string name="sign_in_using_mobile_number">Sign in Using Mobile Number</string>
+    <string name="enter_your_phone_number_to_sign_in">Enter Your Phone Number To Sign In</string>
+
+    <!--Google Strings-->
+    <!--<string name="default_web_client_id">244538238559-pspp6i27mmhrnha5g7n5un01bp1aal8n.apps.googleusercontent.com</string>-->
+</resources>

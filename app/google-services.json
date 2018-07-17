@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "640256678235",
+    "firebase_url": "https://loginmain-7bdb2.firebaseio.com",
+    "project_id": "loginmain-7bdb2",
+    "storage_bucket": "loginmain-7bdb2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640256678235:android:62eb2174e478ecd4",
+        "android_client_info": {
+          "package_name": "inc.frontlooksoftwares.loginmain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "640256678235-0v8vkide470vd801ospgpthhmmnm0r67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "inc.frontlooksoftwares.loginmain",
+            "certificate_hash": "b2b5ad53251dd74891cbe49df663d6d33a6cb6b8"
+          }
+        },
+        {
+          "client_id": "640256678235-3na0oik520l8qv1ei72me4pp8likkhkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGPXZwPJKNqOwFd3bVJ5_UhN37o5Mh750"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "640256678235-3na0oik520l8qv1ei72me4pp8likkhkj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
