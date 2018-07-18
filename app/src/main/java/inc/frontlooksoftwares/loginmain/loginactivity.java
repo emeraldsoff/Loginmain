@@ -25,27 +25,27 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class loginactivity extends Activity {
 
+    private final static int RC_SIGN_IN = 1;
     SignInButton gbtn;
     FirebaseAuth mAuth;
     Button mob_signin;
     FirebaseAuth.AuthStateListener mAuthlistener;
     GoogleSignInClient mGoogleSignInClient;
-    private final static int RC_SIGN_IN = 1;
 
     @Override
     protected void onStart() {
         super.onStart();
         int SPLASH_DISPLAY_LENGTH = 0;
-        new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 //                Logger.d("Start splash screen");
-                mAuthlistener=new FirebaseAuth.AuthStateListener() {
+                mAuthlistener = new FirebaseAuth.AuthStateListener() {
                     @Override
                     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                         FirebaseUser user = firebaseAuth.getCurrentUser();
                         if (user != null) {
-                            startActivity(new Intent(loginactivity.this,MainActivity.class));
+                            startActivity(new Intent(loginactivity.this, MainActivity.class));
                         }
                     }
                 };
@@ -61,8 +61,8 @@ public class loginactivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.loginactivity);
 
-        mob_signin=findViewById(R.id.mobile_signin);
-        gbtn=findViewById(R.id.googlebutton);
+        mob_signin = findViewById(R.id.mobile_signin);
+        gbtn = findViewById(R.id.googlebutton);
 //        fbtn=findViewById(R.id.facebookbutton);
         mAuth = FirebaseAuth.getInstance();
         gbtn.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +74,7 @@ public class loginactivity extends Activity {
         mob_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(loginactivity.this,mobile_signin.class));
+                startActivity(new Intent(loginactivity.this, mobile_signin.class));
             }
         });
         // Configure Google Sign In
@@ -110,6 +110,7 @@ public class loginactivity extends Activity {
             }
         }
     }
+
     private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
         Log.d("TAG", "firebaseAuthWithGoogle:" + acct.getId());
 

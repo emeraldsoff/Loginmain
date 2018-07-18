@@ -19,16 +19,16 @@ public class MainActivity extends Activity {
 
         mAuth = FirebaseAuth.getInstance();
         int SPLASH_DISPLAY_LENGTH = 0;
-        new Handler().postDelayed(new Runnable(){
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
 //                Logger.d("Start splash screen");
-                mAuthlistener=new FirebaseAuth.AuthStateListener() {
+                mAuthlistener = new FirebaseAuth.AuthStateListener() {
                     @Override
                     public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                         FirebaseUser user = firebaseAuth.getCurrentUser();
                         if (user == null) {
-                            startActivity(new Intent(MainActivity.this,loginactivity.class));
+                            startActivity(new Intent(MainActivity.this, loginactivity.class));
                         }
                     }
                 };
