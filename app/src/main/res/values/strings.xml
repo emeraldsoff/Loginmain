@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Loginmain</string>
     <string name="ok">OK</string>
+    <string name="submit">SUBMIT</string>
     <string name="signup_login">OR USE</string>
     <string name="data_keeper">Data Keeper</string>
     <string name="frontlook">FrontLook</string>
@@ -12,6 +13,12 @@
     <string name="fb_login_protocol_scheme">fb[APP_ID]</string>
     <string name="sign_in_using_mobile_number">Sign in Using Mobile Number</string>
     <string name="enter_your_phone_number_to_sign_in">Enter Your Phone Number To Sign In</string>
+    <string name="select_country_code">Select Country Code</string>
+    <string name="enter_country_code">Enter Country Code</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="country_code_your_mobile_number">Country Code+Your Mobile Number</string>
+    <string name="instruction1">If Your Country Code Is "091" Then Add Your Phone Number As "+91" Followed By Your Mobile Number</string>
 
     <!--Google Strings-->
     <!--<string name="default_web_client_id">244538238559-pspp6i27mmhrnha5g7n5un01bp1aal8n.apps.googleusercontent.com</string>-->
