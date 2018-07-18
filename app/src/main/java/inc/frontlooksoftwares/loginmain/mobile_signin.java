@@ -68,7 +68,7 @@ public class mobile_signin extends Activity implements
     private EditText mPhoneNumberField;
     private EditText mVerificationField;
 
-    private TextView show_time, code_sent;
+    private TextView show_time, code_sent, instruction;
 //    private CountDownTimer timer;
 
 
@@ -91,6 +91,7 @@ public class mobile_signin extends Activity implements
         mStartButton = findViewById(R.id.mobno_submit);
         mVerifyButton = findViewById(R.id.submitcode);
         mResendButton = findViewById(R.id.coderesend);
+        instruction = findViewById(R.id.instruction);
 
         mSignOutButton = findViewById(R.id.sign_out_button);
 
@@ -124,7 +125,7 @@ public class mobile_signin extends Activity implements
 
                 // [START_EXCLUDE silent]
                 // Update the UI and attempt sign in with the phone credential
-//                updateUI(STATE_VERIFY_SUCCESS, credential);
+                updateUI(STATE_VERIFY_SUCCESS, credential);
                 // [END_EXCLUDE]
                 signInWithPhoneAuthCredential(credential);
             }
@@ -153,7 +154,7 @@ public class mobile_signin extends Activity implements
 
                 // Show a message and update the UI
                 // [START_EXCLUDE]
-//                updateUI(STATE_VERIFY_FAILED);
+                updateUI(STATE_VERIFY_FAILED);
                 // [END_EXCLUDE]
             }
 
@@ -171,7 +172,7 @@ public class mobile_signin extends Activity implements
 
                 // [START_EXCLUDE]
                 // Update UI
-//                updateUI(STATE_CODE_SENT);
+                updateUI(STATE_CODE_SENT);
                 // [END_EXCLUDE]
             }
         };
@@ -388,28 +389,28 @@ public class mobile_signin extends Activity implements
         switch (uiState) {
             case STATE_INITIALIZED:
                 // Initialized state, show only the phone number field and start button
-                enableViews(mStartButton, mPhoneNumberField);
+                enableViews(mStartButton, mPhoneNumberField, instruction);
                 disableViews(mVerifyButton, mResendButton, mVerificationField, code_sent);
 //                mDetailText.setText(null);
                 break;
             case STATE_CODE_SENT:
                 // Code sent state, show the verification field, the
                 enableViews(mVerifyButton, mResendButton, mPhoneNumberField, mVerificationField, code_sent);
-                disableViews(mStartButton);
+                disableViews(mStartButton, instruction);
                 code_sent.setText("Code Sent");
                 //  mDetailText.setText(R.string.status_code_sent);
                 Toast.makeText(mobile_signin.this, "code sent", Toast.LENGTH_LONG).show();
                 break;
             case STATE_VERIFY_FAILED:
                 // Verification has failed, show all options
-                enableViews(mStartButton, mVerifyButton, mResendButton, mPhoneNumberField, mVerificationField);
+                enableViews(mStartButton, instruction, mVerifyButton, mResendButton, mPhoneNumberField, mVerificationField);
                 disableViews(code_sent);
                 //  mDetailText.setText(R.string.status_verification_failed);
                 Toast.makeText(mobile_signin.this, "verification failed", Toast.LENGTH_LONG).show();
                 break;
             case STATE_VERIFY_SUCCESS:
                 // Verification has succeeded, proceed to firebase sign in
-                disableViews(mStartButton, mVerifyButton, mResendButton, mPhoneNumberField, mVerificationField);
+                disableViews(mStartButton, instruction, mVerifyButton, mResendButton, mPhoneNumberField, mVerificationField);
                 //  mDetailText.setText(R.string.status_verification_succeeded);
                 Toast.makeText(mobile_signin.this, "verification success", Toast.LENGTH_LONG).show();
                 // Set the verification text based on the credential
@@ -417,7 +418,7 @@ public class mobile_signin extends Activity implements
                     if (cred.getSmsCode() != null) {
                         mVerificationField.setText(cred.getSmsCode());
                     } else {
-//                                 mVerificationField.setText(R.string.instant_validation);
+                        mVerificationField.setText(R.string.instant_validation);
                     }
                 }
 
@@ -451,8 +452,8 @@ public class mobile_signin extends Activity implements
 
         if (user == null) {
             // Signed out
-            //  mPhoneNumberViews.setVisibility(View.VISIBLE);
-            //    mSignedInViews.setVisibility(View.GONE);
+//              mPhoneNumberViews.setVisibility(View.VISIBLE);
+//                mSignedInViews.setVisibility(View.GONE);
 
             //  mStatusText.setText(R.string.signed_out);
         } else {

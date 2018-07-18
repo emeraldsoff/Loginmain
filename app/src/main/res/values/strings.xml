@@ -3,7 +3,7 @@
     <string name="ok">OK</string>
     <string name="submit">SUBMIT</string>
     <string name="signup_login">OR USE</string>
-    <string name="data_keeper">Data Keeper</string>
+    <string name="data_keeper">LogIn/SignUp</string>
     <string name="frontlook">FrontLook</string>
     <string name="enter_10_digit_mobile_number">Enter 10 Digit Mobile Number</string>
     <string name="signup_login_using_google_facebook">null</string>
@@ -19,6 +19,7 @@
     <string name="resend_code">Resend Code</string>
     <string name="country_code_your_mobile_number">Country Code+Your Mobile Number</string>
     <string name="instruction1">If Your Country Code Is "091" Then Add Your Phone Number As "+91" Followed By Your Mobile Number</string>
+    <string name="instant_validation">Instant Validated</string>
 
     <!--Google Strings-->
     <!--<string name="default_web_client_id">244538238559-pspp6i27mmhrnha5g7n5un01bp1aal8n.apps.googleusercontent.com</string>-->
