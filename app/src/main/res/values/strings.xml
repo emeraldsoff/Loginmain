@@ -20,6 +20,7 @@
     <string name="country_code_your_mobile_number">Country Code+Your Mobile Number</string>
     <string name="instruction1">If Your Country Code Is "091" Then Add Your Phone Number As "+91" Followed By Your Mobile Number</string>
     <string name="instant_validation">Instant Validated</string>
+    <string name="default_web_client_id">640256678235-0v8vkide470vd801ospgpthhmmnm0r67.apps.googleusercontent.com</string>
 
     <!--Google Strings-->
     <!--<string name="default_web_client_id">244538238559-pspp6i27mmhrnha5g7n5un01bp1aal8n.apps.googleusercontent.com</string>-->
